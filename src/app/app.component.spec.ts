@@ -16,18 +16,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'base-project'`, () => {
+  it(`should have as title 'cafelist'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('base-project');
+    expect(app.title).toEqual('cafelist');
   });
 
-  it('should render title', () => {
+  /*it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain(
       'base-project app is running!'
     );
-  });
+  });*/
 });
