@@ -1,1 +1,22 @@
-<p>cafe-list works!</p>
+<div class="col-md-8">
+  <div class="content table-responsive table-full-width">
+    <table class="table">
+      <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Región</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let cafe of cafes">
+        <th>{{cafe.id}}</th>
+        <td>{{cafe.nombre}}</td>
+        <td>{{cafe.tipo}}</td>
+        <td>{{cafe.region}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
