@@ -10,12 +10,17 @@ import { CafeService } from "../cafe.service";
 export class CafeListComponent implements OnInit {
 
   cafes: Array<Cafe> = []
+  countsCafes: {[key: string]: number} = {};
 
   constructor(private cafeService: CafeService) {}
 
   getCafes(): void{
     this.cafeService.getCafes().subscribe((cafes) => {
       this.cafes = cafes;
+
+      this.cafes.forEach((item) => {
+        this.countsCafes[item.tipo] = this.countsCafes[item.tipo] ? (this.countsCafes[item.tipo] += 1) : 1;
+      });
     })
   }
 

@@ -19,4 +19,10 @@
       </tbody>
     </table>
   </div>
+  <div class="row">
+    <div *ngFor="let item of countsCafes | keyvalue">
+      Total tipo {{ item.key }}: {{ item.value }}
+    </div>
+  </div>
+
 </div>
